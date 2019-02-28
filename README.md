@@ -1,8 +1,14 @@
 # FlameBuoyant
-# FlameBuoyant
-There are many health problems that all people can't have the availability to meet the physician in person.
-How to solve these????
 
-Don't worry we have Dr.Flamebuoyant.He can suggest many cauterize techniques.
+## Problem:
 
-Our project is "Health suggesting chatbot"(Dr.Flamebuoyant)
+What If doctor isn't available during emergency??
+
+Why should we consult doctor for small problems like cold and fever?
+
+
+## Solution:
+
+To solve this problem we have Dr.Flamebuoyant the ChatBot.He can suggest many cauterize techniques and simple precautions and techniques during emergencies.
+
+Our project is "Health suggesting chatbot"(Dr.Flamebuoyant).
