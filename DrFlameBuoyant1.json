@@ -1,0 +1,887 @@
+
+
+{
+  "name": "Chat with Dr.FlameBouoyant",
+  "intents": [
+    {
+      "intent": "treatementsuggestions",
+      "examples": [
+        {
+          "text": "I am hit by"
+        },
+        {
+          "text": "hit by"
+        },
+        {
+          "text": "I got"
+        },
+        {
+          "text": "I got struck with"
+        },
+        {
+          "text": "I have"
+        },
+        {
+          "text": "I have problem of"
+        },
+        {
+          "text": "I have been suffering"
+        },
+        {
+          "text": "I am effected"
+        },
+        {
+          "text": "I am infected"
+        },
+        {
+          "text": "I am feeling"
+        }
+      ],
+      "description": "To suggest suitable medicines"
+    },
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "hiii"
+        },
+        {
+          "text": "knock knock"
+        },
+        {
+          "text": "Excuse me"
+        },
+        {
+          "text": "how are you dpoing"
+        },
+        {
+          "text": "Hii"
+        },
+        {
+          "text": "what's up"
+        },
+        {
+          "text": "heyy"
+        },
+        {
+          "text": "xcuse me"
+        },
+        {
+          "text": "Hey"
+        },
+        {
+          "text": "Hey there"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "Good Morning"
+        },
+        {
+          "text": "how are you doing"
+        }
+      ],
+      "description": "User greets"
+    },
+    {
+      "intent": "unknown",
+      "examples": [
+        {
+          "text": "I am not in good health."
+        },
+        {
+          "text": "I am not in good shape"
+        },
+        {
+          "text": "I am not good"
+        },
+        {
+          "text": "I am not feeling well"
+        }
+      ],
+      "description": "For other diseases"
+    },
+    {
+      "intent": "thanking",
+      "examples": [
+        {
+          "text": "Thnks"
+        },
+        {
+          "text": "nice of you"
+        },
+        {
+          "text": "thnks for help"
+        },
+        {
+          "text": "by"
+        },
+        {
+          "text": "bye"
+        },
+        {
+          "text": "Thanks"
+        },
+        {
+          "text": "Thanks for help"
+        },
+        {
+          "text": "Thank you"
+        },
+        {
+          "text": "Alright"
+        }
+      ],
+      "description": "Thanking Dr.FlameBouyant"
+    },
+    {
+      "intent": "Emergency",
+      "examples": [
+        {
+          "text": "Save"
+        },
+        {
+          "text": "Help!!"
+        },
+        {
+          "text": "Help!"
+        },
+        {
+          "text": "Help"
+        },
+        {
+          "text": "Save us"
+        },
+        {
+          "text": "Emergency"
+        },
+        {
+          "text": "What should I do"
+        },
+        {
+          "text": "Save me"
+        }
+      ],
+      "description": "Emergency situation"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "mediumdisease",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "vomtings",
+          "synonyms": [
+            "vomtings,indigestion,"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "dehydration",
+          "synonyms": [
+            "dehydration,thirst,thirsty"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "cramps",
+          "synonyms": [
+            "legcramps,handcramps,musclepains,muscleissues"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "diabetes",
+          "synonyms": [
+            "diabetes,sugar,diabetic,"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "allergies",
+          "synonyms": [
+            "allergies,rashes,allergic,allergitic,skinburn,skinitch,itching"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "aasthma",
+          "synonyms": [
+            "asthma,aasthma,breathingproblem,breathingissues"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "largerdiseases",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "HIV",
+          "synonyms": [
+            "HIV,hiv,Hiv"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "AIDS",
+          "synonyms": [
+            "AIDS,Aids,aids"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "heartrelated",
+          "synonyms": [
+            "heartattack,heart failure,heart pain,chest pain,hole in heart"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "brain related",
+          "synonyms": [
+            "tumour,brain tumour"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "lungrealted",
+          "synonyms": [
+            "TB,tb,Tb,tuberculosis,",
+            "pneumonia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "liver related",
+          "synonyms": [
+            "Hepatitis"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "arthritis",
+          "synonyms": [
+            "arthritis,Arthritis"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Cancer",
+          "synonyms": [
+            "cancer,Cancer,CANCER"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "smalldisease",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "cold",
+          "synonyms": [
+            "cold,flu,cough,nose,runningnose,",
+            "flu"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "fever",
+          "synonyms": [
+            "fever,hot,"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "backpain",
+          "synonyms": [
+            "backpain,backache,badback,backtrouble"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "legpains",
+          "synonyms": [
+            "legpain,legpains,kneepains,jointpains,legcrack"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "stomachpain",
+          "synonyms": [
+            "stomachpain,stomachache,stomachtrouble,fullstomach"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "headache",
+          "synonyms": [
+            "headache,headpain,migrain,migrane,skull,skullpain"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "firstaid",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "poison",
+          "synonyms": [
+            "snakebite,bitten by snake,poisoned by snake,venom sting,venom"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "cuts",
+          "synonyms": [
+            "cuts,skintear,skincuts,",
+            "scrathes,scrathches on skin,bite,bites,Dog bites"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "fracture",
+          "synonyms": [
+            "broken,fracture,break,breaks,lot of pain,bone break"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-07-10"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "First of all place the person on a smooth surface and make sure the paining area is not moving or levied any weight on it.And do not move the fractred part.Consult nearest doctor for further treatment."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1551380701976",
+      "metadata": {},
+      "conditions": "@firstaid:fracture",
+      "dialog_node": "node_5_1551381252550",
+      "previous_sibling": "node_4_1551380884071"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "First make sure the Poisoned person isn't Paniked or get afraid as it spreads Venom faster.Then tie the poisoned area tightly with a cloth.Consult nearest doctor for Anti-Venom as soon as possible."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1551380701976",
+      "metadata": {},
+      "conditions": "@firstaid:poison",
+      "dialog_node": "node_6_1551381426621",
+      "previous_sibling": "node_5_1551381252550"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Just clean the affected area with water and tie it tightly if it is bleeding.Then apply Neosporin Ointment from First-Aid kit and consult a doctor as soon as possible. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1551380701976",
+      "metadata": {},
+      "conditions": "@firstaid:cuts",
+      "dialog_node": "node_4_1551380884071"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This might be due to contact with some unusual things/conditions just avoid those things/conditions and use  Idocol tablet.If problem still retains consult nearest Dermotologist."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @mediumdisease:allergies",
+      "dialog_node": "node_14_1551384678387",
+      "previous_sibling": "node_13_1551382832362"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello!I am good!Hope you are good too.What shall I do?"
+              },
+              {
+                "text": "Hi!!Thanks!I am good.Hope you are good too."
+              },
+              {
+                "text": "Hey there! I am good.How you doing?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#greeting",
+      "dialog_node": "node_1_1551380139855",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Just use sinarest tablet twice a day for 2 days.If it doesn't show any effect consult nearest doctor."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @smalldisease:cold",
+      "dialog_node": "node_8_1551382063286",
+      "previous_sibling": "node_7_1551381798806"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_21_1551385465717"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Just take acetaminophen tablet twice a day for 1 day.If it doesn't show any effect consult nearest doctor."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "source": "https://www.google.co.in/imgres?imgurl=http%3A%2F%2Fi.dailymail.co.uk%2Fi%2Fpix%2F2015%2F09%2F01%2F18%2F2BE1E88B00000578-3218613-image-m-5_1441127035222.jpg&imgrefurl=https%3A%2F%2Fwww.google.com%2Fimghp%3Fhl%3DEN&docid=ZY5ouBM3GeMG4M&tbnid=YKVTF-GCt7tkiM%3A&vet=10ahUKEwik8Me3rt_gAhXEVisKHRM5CKEQMwhqKAAwAA..i&w=634&h=479&client=opera&bih=762&biw=1496&q=google%20images&ved=0ahUKEwik8Me3rt_gAhXEVisKHRM5CKEQMwhqKAAwAA&iact=mrc&uact=8",
+            "response_type": "image"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @smalldisease:headache",
+      "dialog_node": "node_9_1551382199950",
+      "previous_sibling": "node_2_1551380499940"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Don't panic!Just relax.Explain the situation."
+              },
+              {
+                "text": "It's ok!Just cool down.Explain what happened."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#Emergency",
+      "dialog_node": "node_3_1551380701976",
+      "previous_sibling": "node_9_1551382199950"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Apply Powergesic gel on the painful area and rest for a while,If it doesn't show any effect use a Wysolone tablet.Problem still retains then consult nearest doctor."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @smalldisease:legpains",
+      "dialog_node": "node_12_1551382599296",
+      "previous_sibling": "node_11_1551382499549"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok that's common due to climatic changes.Just get yourself a Inhaler of Cipla and use it for 1 week.If it doesn't show any results just consult a doctor."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @mediumdisease:aasthma",
+      "dialog_node": "node_13_1551382832362",
+      "previous_sibling": "node_12_1551382599296"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This is a common problem due to age factor.Just relax and use Lisinopril.Get some time off from your work and take a nap."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @mediumdisease:diabetes",
+      "dialog_node": "node_15_1551384868420",
+      "previous_sibling": "node_14_1551384678387"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Use Volini spray and rest for a while.If it doesn't show any effect use Tramadol tablet.If still problem exists consult nearest doctor."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @smalldisease:backpain",
+      "dialog_node": "node_11_1551382499549",
+      "previous_sibling": "node_10_1551382350226"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Why so?"
+              },
+              {
+                "text": "Can you please explain the problem in detial?"
+              },
+              {
+                "text": "Tell me more about your problem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#unknown",
+      "dialog_node": "node_16_1551384993621",
+      "previous_sibling": "node_15_1551384868420"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This might be because of several reasons.One cannot assist for such disease without examining the patient.Consult nearest specialist.Contact Dr.Vibhav Number:9555555555(7 am to 11pm). https://www.facebook.com/messages/t/vibhav.chirravuri.3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @largerdiseases:HIV",
+      "dialog_node": "node_20_1551385340096",
+      "previous_sibling": "node_19_1551385228588"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Feeling good to help you.Get well soon."
+              },
+              {
+                "text": "Get well soon.An apple a day keeps doctor away! Follow this.Bye!"
+              },
+              {
+                "text": "An apple a day keeps doctor away.Bye!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#thanking",
+      "dialog_node": "node_2_1551380499940",
+      "previous_sibling": "node_1_1551380139855"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Take Oral Dehydration Solution as soon as possible and have some rest to retain the lost hydrates from your body.If problem still persist's consult nearest doctor."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @mediumdisease:dehydration",
+      "dialog_node": "node_18_1551385150350",
+      "previous_sibling": "node_17_1551384999338"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's a small problem.Use 1 tablet of Paracetamol once every 6 hours for 1 day.If it doesn't work,it might be a viral fever.Don't neglect and consult nearest Doctor."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @smalldisease:fever",
+      "dialog_node": "node_7_1551381798806",
+      "previous_sibling": "node_3_1551380701976"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This might be due to unusual workout and stress on muscles.Just relax and take Crampnil tablet.If it doesn't show any effect consult a Physiotherapist."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @mediumdisease:cramps",
+      "dialog_node": "node_17_1551384999338",
+      "previous_sibling": "node_16_1551384993621"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This might be because of several reasons.One cannot assist for such disease without examining the patient.Consult nearest specialist.Contact Dr.Vibhav Number:7555555555(7 am to 11 pm).https://www.facebook.com/messages/t/vibhav.chirravuri.3"
+              },
+              {
+                "text": "Sorry this seems to be a huge problem which cannot be assisted without examining in person.Kindly,consult nearest doctor.https://www.facebook.com/messages/t/vibhav.chirravuri.3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @largerdiseases:heartrelated || @largerdiseases:(brain related) || @largerdiseases:lungrealted || @largerdiseases:(liver related) || @largerdiseases:arthritis || @largerdiseases:Cancer || @largerdiseases:AIDS",
+      "dialog_node": "node_21_1551385465717",
+      "previous_sibling": "node_20_1551385340096"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Use Aludrox once if it doesn't work use it another time.If still the problem retains consult nearest doctor."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @smalldisease:stomachpain",
+      "dialog_node": "node_10_1551382350226",
+      "previous_sibling": "node_8_1551382063286"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This might be due to several reasns.Primary cause may be due to Food Poisoning.Use Zofran tablet twice.If problem still persist's consult nearest doctor."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#treatementsuggestions && @mediumdisease:vomtings",
+      "dialog_node": "node_19_1551385228588",
+      "previous_sibling": "node_18_1551385150350"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. This is Dr.FlameBouyant.How can I help you?"
+              },
+              {
+                "text": "Dr.FlamBouyant here.How can I help you?"
+              },
+              {
+                "text": "Hey there!Dr.FlameBouyant is available.How can I help you?"
+              },
+              {
+                "text": "Hola!Welcome to Dr.FlameBouyant health suggesting bot.How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "workspace_id": "710732da-cbd6-42dc-b686-369788889ab0",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
+
+
+skill-Chat-with-Dr.FlameBouoyant (1).json
